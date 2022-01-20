@@ -1,19 +1,12 @@
-pipeline {
-  agent any
-  stages {
-  stage('Stage 1') {
-      steps {
-        script {
-          echo 'Stage 1'
+ pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
-      }
     }
-  stage('Stage 2') {
-      steps {
-        script {
-          echo 'Stage 2'
-        }
-      }
-    }
-  }
 }
+[16:13, 20/01/2022] Babu Gummadidala: checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConf
